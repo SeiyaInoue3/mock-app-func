@@ -1,0 +1,23 @@
+{
+  "bindings": [
+    {
+      "authLevel": "anonymous",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "get",
+        "post"
+      ]
+    },
+    {
+      "type": "cosmosDB",
+      "direction": "out",
+      "name": "outputDocument",
+      "databaseName": "mock-app-cosmosdb-database",
+      "collectionName": "mock-app-cosmosdb-container",
+      "createIfNotExists": "false",
+      "connectionStringSetting": "CosmosDbConnectionString"
+    }
+  ]
+}
